@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Nav from './Nav';
+import Home from './Home';
 
 function App() {
  useEffect(() => {
@@ -28,8 +29,9 @@ async function callapi (){
  },[])
   
   return (
-    <div className="App">
+    <div  className="App">
        <Nav/>
+       <Home/>
     </div>
   );
 }
