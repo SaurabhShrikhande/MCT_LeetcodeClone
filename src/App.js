@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import axios from 'axios';
+import Nav from './Nav';
 
 function App() {
+ useEffect(() => {
+
+const options = {
+  method: 'GET',
+  url: 'https://judge0-ce.p.rapidapi.com/about',
+  headers: {
+    'X-RapidAPI-Key': '78694a20d7mshef0f9d10f0862bdp1bfcf2jsn1311620c552a',
+    'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
+  }
+};
+async function callapi (){
+  try {
+    const response = await axios.request(options);
+    console.log(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+  callapi();
+  
+ },[])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Nav/>
     </div>
   );
 }
