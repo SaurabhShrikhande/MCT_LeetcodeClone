@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import Nav from './Nav';
 import Home from './Home';
+import SignIn from './SignIn';
 
 function App() {
  useEffect(() => {
@@ -29,9 +30,10 @@ async function callapi (){
  },[])
   
   return (
-    <div  className="App">
+    <div  className="Appone">
        <Nav/>
        <Home/>
+       <SignIn/>
     </div>
   );
 }

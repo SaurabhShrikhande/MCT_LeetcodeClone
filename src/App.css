@@ -2,8 +2,18 @@
   text-align: center;
 } */
 
-.App {
+.Appone {
  box-sizing: border-box;
  margin: 0;
  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
