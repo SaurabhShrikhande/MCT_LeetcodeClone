@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import Nav from './Nav';
 import Home from './Home';
-import SignIn from './Signin';
+import SignIn from './SignIn';
 import SignUp from './SignUp';
 import {
   createBrowserRouter,
