@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Nav from "./Nav";
+
 
 export default function Home(){
     return(<div>
@@ -10,7 +10,11 @@ export default function Home(){
             <Link to="/SignUp">
             <button style={{background:"#F89F1B", color:"white", padding:"10px 15px", border:"none", borderRadius:"20px", fontWeight:"800", cursor:"pointer"}}>Create Account</button>
             </Link>
+            <div>
+            
             </div>
+            </div>
+            
       </div>  
     </div>)
 }
