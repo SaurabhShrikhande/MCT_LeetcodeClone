@@ -10,7 +10,8 @@ export default function Signout(){
     const navigate = useNavigate();
     const contxt = useContext(userContext);
 
-    function signout(){
+    function signout(e){
+      e.preventDefault();
           signOut(auth)
          .then(() =>{
             contxt.setlog(false);
