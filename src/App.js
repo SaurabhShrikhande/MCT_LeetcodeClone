@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import Nav from './Nav';
 import Home from './Home';
-import SignIn from './SignIn';
+import SignIn from './SignInn';
 import SignUp from './SignUp';
 import {
   createBrowserRouter,
@@ -14,6 +14,7 @@ import { userContext } from './UserContext';
 import { useState } from 'react';
 import Protect from './Protect';
 import Signout from './Signout';
+import Leetcode from './Leetcode';
 
 function App() {
   const [log , setlog ] = useState(false);
@@ -100,7 +101,14 @@ const route = createBrowserRouter([
         path : "/Protect",
         element : <Signout/>
       },
+      {
+        path : "/Protect2",
+        element : <Layout/>
+      },
     ]
+  },{
+    path : "/Leetcode",
+    element : <Leetcode/>
   }
 
 
