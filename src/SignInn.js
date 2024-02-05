@@ -19,7 +19,7 @@ const contxt = useContext(userContext);
       alert("USER SIGN iN");
       console.log(contxt.log);
       contxt.setlog(true);
-       navigate("/Protect")
+       navigate("/Leetcode")
    //   navigate("/Home");
     }
    )

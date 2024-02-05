@@ -7,8 +7,8 @@ export default function Nav(){
     const contxt = useContext(userContext);
     const navigate = useNavigate();
     function signot(){
-        contxt.setlog(false);
-           navigate('/');
+       // contxt.setlog(false);
+           navigate('/Protect');
     }
     return (<>
         
