@@ -3,16 +3,22 @@ import { Link , useNavigate} from 'react-router-dom';
 import {signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { auth } from './firebase'
+import { useContext } from "react";
+import { userContext } from "./UserContext";
 
 export default function SignIn(){
  const [email , setemail] = useState("");
 const [pass , setpass] = useState("");
-// const navigate = useNavigate();
+const contxt = useContext(userContext);
+ const navigate = useNavigate();
   function handllelogin(e){
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, pass) 
     .then(() => {
+      
       alert("USER SIGN iN");
+      console.log(contxt.log);
+            navigate("/Protect")
    //   navigate("/Home");
     }
    )

@@ -10,8 +10,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from './Layout';
+import { userContext } from './UserContext'; 
+import { useState } from 'react';
+import Protect from './Protect';
+
 
 function App() {
+  const [log , setlog ] = useState(false);
 //  useEffect(() => {
 
 // const options = {
@@ -68,6 +73,10 @@ function App() {
 // }, [])
   
 const route = createBrowserRouter([
+    {
+      path :"Protect",
+      element : <Protect/>
+    },
   {
     path : "/",
     element : <Layout/>,
@@ -100,11 +109,16 @@ const route = createBrowserRouter([
 
   return (
     <div  className="Appone">
+      <userContext.Provider value={{
+        log ,
+        setlog
+      }}>
       <RouterProvider router = {route} />
        {/* <Nav/>
        <Home/>
        <SignIn/>
        <SignUp/> */}
+       </userContext.Provider>
     </div>
   );
 }
