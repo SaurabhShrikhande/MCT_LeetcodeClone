@@ -18,7 +18,8 @@ const contxt = useContext(userContext);
       
       alert("USER SIGN iN");
       console.log(contxt.log);
-            navigate("/Protect")
+      contxt.setlog(true);
+       navigate("/Protect")
    //   navigate("/Home");
     }
    )

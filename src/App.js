@@ -13,7 +13,7 @@ import Layout from './Layout';
 import { userContext } from './UserContext'; 
 import { useState } from 'react';
 import Protect from './Protect';
-
+import Signout from './Signout';
 
 function App() {
   const [log , setlog ] = useState(false);
@@ -73,10 +73,6 @@ function App() {
 // }, [])
   
 const route = createBrowserRouter([
-    {
-      path :"Protect",
-      element : <Protect/>
-    },
   {
     path : "/",
     element : <Layout/>,
@@ -96,6 +92,18 @@ const route = createBrowserRouter([
 
     ]
   },
+  {
+    path :"/Protect",
+    element : <Protect/>,
+    children : [
+      {
+        path : "/Protect",
+        element : <Signout/>
+      },
+    ]
+  }
+
+
   // {
   //   path : "/Signin",
   //   element : <SignIn/>
