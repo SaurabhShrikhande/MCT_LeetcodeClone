@@ -1,6 +1,8 @@
 import './List.css';
 import Nav from "./Nav"
+import { useNavigate } from 'react-router-dom'; 
 export default function List(){
+  const navigate = useNavigate();
     const arr = [
         {
           sr : "Sr.",
@@ -66,7 +68,6 @@ export default function List(){
     ]
 
     return (<div>
-        <Nav/>
         <div  style={{background:"black" , minHeight:"calc(100vh - 70px )"}}>
             {
                 arr.map((item, idx) => {
@@ -83,7 +84,7 @@ export default function List(){
                     }
                     {
                         idx !== 0 && 
-                        <tr style={idx % 2 === 0 ? {background:"rgb(40,40,40)" }: {background: ""}  }>
+                        <tr onClick={() => navigate("/Leetcode")} style={idx % 2 === 0 ? {background:"rgb(40,40,40)", cursor:"pointer" }: {background: "",  cursor:"pointer"} }>
                         <td style={{width:"40px", paddingLeft:"20px"}}>{idx}</td>
                         <td style={{width:"200px"}}>{item.title}</td>
                         <td style={{width:"120px"}}>{item.difficulty}</td>

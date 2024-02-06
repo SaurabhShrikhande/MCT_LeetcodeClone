@@ -19,7 +19,7 @@ const contxt = useContext(userContext);
       alert("USER SIGN iN");
       console.log(contxt.log);
       contxt.setlog(true);
-       navigate("/Leetcode")
+       navigate("/List")
    //   navigate("/Home");
     }
    )
@@ -33,7 +33,7 @@ const contxt = useContext(userContext);
          <form >
         <input style={{width:"400px", fontSize:"25px"}} type = "text"  placeholder='userId' onChange={(e) => setemail(e.target.value)} value={email}/> <br/>
         <input style={{width:"400px", fontSize:"25px"}} type ="password" placeholder="password" onChange={(e) => setpass(e.target.value)} value={pass}/> <br></br>
-        <button onClick={handllelogin}  style={{width:"400px", fontSize:"25px" , backgroundColor:"#0095F6", color:"white", border:"none", padding:"5px 0", borderRadius:"10px"}}>Sign In</button>
+        <button onClick={handllelogin}  style={{width:"400px", fontSize:"25px" , backgroundColor:"#0095F6", color:"white", border:"none", padding:"5px 0", borderRadius:"10px", cursor:"pointer"}}>Sign In</button>
         </form>
       </div>
        <hr style={{width:"450px", marginTop:"70px"}}></hr>

@@ -6,7 +6,6 @@ import Nav from './Nav';
 export default function Leetcode() {
 
     return (<div style={{}}>
-        <Nav />
         <div style={{ background: "black", border: "20px solid black" }}>
             <div style={{ background: "rgb(40,40,40)" , color:"white"}}>
                 <Split

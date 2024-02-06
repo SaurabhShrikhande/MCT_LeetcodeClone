@@ -90,31 +90,52 @@ const route = createBrowserRouter([
       {
         path : "/SignUp",
         element : <SignUp/>
+      },
+      {
+        path :"/Protect",
+        element : <Protect/>,
+        children : [
+          {
+            path : "/Protect",
+            element : <Signout/>
+          },
+          {
+            path : "/Protect2",
+            element : <Layout/>
+          },
+        ]
+      },{
+        path : "/Leetcode",
+        element : <Leetcode/>
+      },
+      {
+        path : "/List",
+        element : <List/>
       }
 
     ]
   },
-  {
-    path :"/Protect",
-    element : <Protect/>,
-    children : [
-      {
-        path : "/Protect",
-        element : <Signout/>
-      },
-      {
-        path : "/Protect2",
-        element : <Layout/>
-      },
-    ]
-  },{
-    path : "/Leetcode",
-    element : <Leetcode/>
-  },
-  {
-    path : "/List",
-    element : <List/>
-  }
+  // {
+  //   path :"/Protect",
+  //   element : <Protect/>,
+  //   children : [
+  //     {
+  //       path : "/Protect",
+  //       element : <Signout/>
+  //     },
+  //     {
+  //       path : "/Protect2",
+  //       element : <Layout/>
+  //     },
+  //   ]
+  // },{
+  //   path : "/Leetcode",
+  //   element : <Leetcode/>
+  // },
+  // {
+  //   path : "/List",
+  //   element : <List/>
+  // }
 
 
   // {
