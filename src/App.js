@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Home from './Home';
 import SignIn from './SignInn';
 import SignUp from './SignUp';
+import List from './List';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -109,6 +110,10 @@ const route = createBrowserRouter([
   },{
     path : "/Leetcode",
     element : <Leetcode/>
+  },
+  {
+    path : "/List",
+    element : <List/>
   }
 
 

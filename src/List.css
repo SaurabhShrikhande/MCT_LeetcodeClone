@@ -1,0 +1,6 @@
+tr, td, table {
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+    border-collapse: collapse;
+}
