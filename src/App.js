@@ -81,7 +81,7 @@ const route = createBrowserRouter([
     element : <Layout/>,
     children : [ 
       {
-        path : "/home",
+        path : "/",
         element : <Home/>
       },
       {
@@ -114,7 +114,7 @@ const route = createBrowserRouter([
         element : <Leetcode/>
       },
      {
-      path : "/",
+      path : "/C",
       element : <Compiler/>
      }
 
