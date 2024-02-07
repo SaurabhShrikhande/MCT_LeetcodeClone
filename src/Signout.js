@@ -24,7 +24,7 @@ export default function Signout(){
 
     return (<div>
           <div className='flex' style={{flexDirection:"column" , minHeight:"400px"}}>
-        <h1>Do you want to log out</h1>
+        <h1>Do you want to Sign out</h1>
         <button style={{width:"400px", fontSize:"25px" , backgroundColor:"#0095F6", color:"white", border:"none", padding:"5px 0", borderRadius:"10px", cursor:"pointer"}} onClick={signout}>Sign out</button>
     </div>
     </div>

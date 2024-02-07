@@ -1,7 +1,6 @@
 import './Split.css';
 import Split from 'react-split'
-
-import Nav from './Nav';
+import Compiler from './Compiler';
 
 export default function Leetcode() {
 
@@ -16,7 +15,6 @@ export default function Leetcode() {
                     <div>
                         <div style={{margin:"20px"}}>
                            split2
-                            
                         </div>
 
                     </div>

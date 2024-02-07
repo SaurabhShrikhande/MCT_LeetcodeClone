@@ -16,6 +16,7 @@ import { useState } from 'react';
 import Protect from './Protect';
 import Signout from './Signout';
 import Leetcode from './Leetcode';
+import Compiler from './Compiler';
 
 function App() {
   const [log , setlog ] = useState(false);
@@ -80,7 +81,7 @@ const route = createBrowserRouter([
     element : <Layout/>,
     children : [ 
       {
-        path : "/",
+        path : "/home",
         element : <Home/>
       },
       {
@@ -104,14 +105,19 @@ const route = createBrowserRouter([
             element : <Layout/>
           },
         ]
-      },{
-        path : "/Leetcode",
-        element : <Leetcode/>
       },
       {
         path : "/List",
         element : <List/>
-      }
+      },{
+        path : "/Leetcode",
+        element : <Leetcode/>
+      },
+     {
+      path : "/",
+      element : <Compiler/>
+     }
+
 
     ]
   },
