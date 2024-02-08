@@ -110,7 +110,7 @@ const route = createBrowserRouter([
         path : "/List",
         element : <List/>
       },{
-        path : "/Leetcode",
+        path : "/Leetcode/:id",
         element : <Leetcode/>
       },
      {
