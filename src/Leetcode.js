@@ -36,7 +36,7 @@ const arrreq = arr.find((item) => item.id === params.id);
                         <h4>Output: <span style={{fontWeight:"400"}}>{arrreq.outputt} </span> </h4>
                         </div>
                     </div>
-                    <div>
+                    <div style={{}}>
                         <div style={{margin:"20px"}}>
                            <select style={{width:"100px" , height:"28px"}}>
                             <option value="java">Java</option>
@@ -45,7 +45,23 @@ const arrreq = arr.find((item) => item.id === params.id);
                             <option value="c++">C++</option>
                            </select>
                         </div>
-
+                           
+                        {/* <div style={{}}>
+                              <h4>TestCases</h4> 
+                              <h3>Case 1</h3>
+                              <h5>Input</h5>
+                              <h3>nums: {arrreq.input} </h3>
+                              <h5>Output</h5>
+                              <h3>{arrreq.output}</h3>
+                       </div>    */}
+                        <textarea style={{width:"95%", height:"70vh", margin:"2%" , background:"rgb(30,30,30)", color:"white"}}></textarea>
+                       <div style={{display:"flex", justifyContent:"space-between"}}>
+                        <button style={{background:"rgb(62,62,62)" , padding:"5px 20px" , borderRadius:"10px", color:"white"}} >Console ^</button>
+                        <div>
+                            <button style={{background:"rgb(62,62,62)" , padding:"5px 20px" , borderRadius:"10px", color:"white"}}>Run</button>
+                            <button style={{background:"rgb(44,187,93)" , padding:"5px 20px" , borderRadius:"10px", color:"white", marginLeft:"15px"}}>Submit</button>
+                        </div>
+                       </div>
                     </div>
                 </Split>
             </div>
